@@ -1,0 +1,45 @@
+return {
+  "folke/snacks.nvim",
+  opts = {
+    dashboard = {
+    preset = {
+    pick = nil,
+    header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+  },
+      sections = {
+        { section = "header" },
+        {
+          pane = 2,
+          section = "terminal",
+          cmd = "/usr/local/bin/colorscript -e square",
+          height = 7,
+          padding = 1,
+        },
+        { section = "keys", gap = 1, padding = 1 },
+        { pane = 2, icon = "", title = "Recent Files", section = "recent_files", indent = 4, padding = 2 },
+        { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 4, padding = 2 },
+        {
+          pane = 2,
+          icon = "",
+          title = "Git Status",
+          section = "terminal",
+          enabled = function()
+            return Snacks.git.get_root() ~= nil
+          end,
+          cmd = "git --no-pager diff --stat -B -M -C",
+          height = 10,
+          padding = 3,
+          ttl = 5 * 60,
+          indent = 4,
+        },
+        { section = "startup" },
+      },
+    },
+  },
+}
