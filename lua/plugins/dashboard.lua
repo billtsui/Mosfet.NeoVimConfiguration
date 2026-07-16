@@ -32,7 +32,7 @@ return {
           enabled = function()
             return Snacks.git.get_root() ~= nil
           end,
-          cmd = 'git status --short --branch\n\n git --no-pager log --pretty=format:"%h - %an, %ar| %s"',
+          cmd = 'git status --short --branch\n\n git --no-pager log --pretty=format:"%h-%an, %ar| %s"',
           height = 4,
           padding = 3,
           ttl = 5 * 60,
