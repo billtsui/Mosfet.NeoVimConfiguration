@@ -1,6 +1,7 @@
 return {
   "sphamba/smear-cursor.nvim",
   opts = {
+    enabled = false,
     -- 启用粒子效果
     particles_enabled = true,
     particle_max_num = 200,
