@@ -12,6 +12,7 @@ return {
       -- 将未激活的边框（FloatBorder）和激活的边框调成高对比度颜色（比如亮白或青色）
       vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#ffffff", bg = "NONE" })
       vim.api.nvim_set_hl(0, "LazyGitBorder", { fg = "#00ffff", bg = "NONE" })
+      vim.api.nvim_set_hl(0, "FloatTitle", { fg = "#25c65a" })
     end,
   },
 }
