@@ -1,7 +1,9 @@
 return {
   "sphamba/smear-cursor.nvim",
   opts = {
-    enabled = false,
+    enabled = function()
+      return vim.uv.os_uname().sysname == "Darwin"
+    end,
     -- 启用粒子效果
     particles_enabled = true,
     particle_max_num = 200,
