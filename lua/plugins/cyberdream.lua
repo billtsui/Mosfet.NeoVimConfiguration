@@ -7,6 +7,7 @@ return {
       transparent = true,
       overrides = function(colors)
         return {
+          Comment = { fg = "#008000", bg = "NONE", italic = true },
           LineNr = { fg = "#808080" },
           CursorLineNr = { fg = colors.green, bold = true },
         }
