@@ -10,8 +10,9 @@ return {
           Comment = { fg = "#008000", bg = "NONE", italic = true },
           LineNr = { fg = "#808080" },
           CursorLineNr = { fg = "#FF9E3B", bold = true },
-          SnacksPickerGitStatusAdded = { fg = "#E0E0E0", bold = true },
+          SnacksPickerGitStatusAdded = { fg = "#F0F0F0", bold = true },
           SnacksPickerGitStatusUntracked = { fg = "#B5E1E6", italic = true },
+          SnacksPickerPathHidden = { fg = "#808080", bold = true },
           SnacksPickerGitStatusModified = { fg = "#FF9E3B", bold = true },
         }
       end,
